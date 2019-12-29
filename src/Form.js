@@ -1,10 +1,11 @@
 import React from 'react'
+import './main.css'
 
 const Form = () => {
     return (
-    <form>
-        <input type="text" />
-        <button type="submit">追加</button>
+    <form className='form'>
+        <input  className='input' type="text" />
+        <button className='addInput' type="submit">add</button>
     </form>
     )
 }
