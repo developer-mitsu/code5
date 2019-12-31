@@ -15,6 +15,9 @@ const List = () => {
 
 const ItemWrap = styled.ul`
     list-style: none;
+    width:80%;
+    padding: 0px;
+    margin: 0 auto;
 `
 
 

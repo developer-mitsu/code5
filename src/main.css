@@ -34,8 +34,10 @@ body {
 } */
 
 .form {
+    width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0px auto 20px;
 }
 
 .input {
@@ -49,5 +51,6 @@ body {
     display: block;
     color: white;
     background-color: #66FF00;
+    border-radius:10px;
     /* margin-left: 20px; */
 }

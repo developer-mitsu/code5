@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const Item = () => {
 
@@ -12,15 +13,54 @@ const Item = () => {
 
 
     return (
-        <li>
-            <input type="checkbox" onChange={() =>{
+        <Listwrap>
+            <LeftContents>
+            <Check type="checkbox" onChange={() =>{
                 setIsDone(!isDone)
             }} />
             <span style={doneLine}>サンプル</span>
-            <button>編集</button>
-            <button>削除</button>
-        </li>
+            </LeftContents>
+            <RightContents>
+            <EditButton>edit</EditButton>
+            <DeleteButton>delete</DeleteButton>
+            </RightContents>
+        </Listwrap>
     )
 }
+
+const Listwrap = styled.li`
+    display: flex;
+    justify-content:space-between;
+    color: red;
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+`
+const LeftContents = styled.a`
+    display: inline-block
+`
+
+const RightContents = styled.a`
+    display: inline-block
+`
+
+const Check = styled.input`
+    
+`
+
+const EditButton = styled.button`
+    color: white;
+    background-color: #66FF00; 
+    margin-right:5px;
+    border-radius:10px;
+`
+
+const DeleteButton = styled.button`
+    color: white;
+    background-color: red;
+    border-radius:10px;
+`
+
+
 
 export default Item
