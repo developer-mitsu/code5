@@ -21,6 +21,11 @@ const App = () => {
         ])    
     }
 
+    // const removeTodo = () => {
+    //     // todo配列からi番目から1つ目のデータを除外
+    //     todos.splice(i,1);
+    // }
+
     return (
         <div className='app'>
             <Title />
