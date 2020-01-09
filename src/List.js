@@ -2,13 +2,24 @@ import React from 'react'
 import Item from './Item'
 import styled from 'styled-components'
 
-const List = () => {
+const List = ({todos}) => {
+
+
+
     return (  
         <ItemWrap>
-            <Item className='first' />
-            <Item />
-            <Item />
-            <Item />
+            {
+                todos.map((todo,i) => {
+                    return(
+                        <Item 
+                        content={todo}
+                        id={i+1}
+                        key={i}
+                        />
+                    )
+
+                })
+            }
         </ItemWrap>
     )
 }

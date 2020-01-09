@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Item = () => {
+const Item = ({content, id}) => {
 
     //React.useStateを実行すると
     //最新の状態の値
@@ -18,7 +18,7 @@ const Item = () => {
             <Check type="checkbox" onChange={() =>{
                 setIsDone(!isDone)
             }} />
-            <span style={doneLine}>サンプル</span>
+            <span style={doneLine}>{`${id}: ${content}`}</span>
             </LeftContents>
             <RightContents>
             <EditButton>edit</EditButton>
