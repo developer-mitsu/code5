@@ -1,18 +1,14 @@
 import React, {useState} from 'react'
 import './main.css'
 
-const Form = ({todos,setTodos}) => {
+const Form = ({addTodos}) => {
 
     const [value, setValue] = useState(``)
 
     const hundleSubmit = (e) => {
         e.preventDefault()
-
-        const newTodos = [
-            ...todos, 
-            value,
-        ]
-        setTodos(newTodos)
+        addTodos(value)
+        setValue('')
     }
 
     return (
@@ -24,6 +20,7 @@ const Form = ({todos,setTodos}) => {
             className='input' 
             type="text" 
             onChange = {(e) => {setValue(e.target.value)}}
+            value = {value}
         />
         <button className='addInput' type="submit">add</button>
     </form>

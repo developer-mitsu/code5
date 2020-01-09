@@ -14,10 +14,17 @@ const App = () => {
         'ううううううう'
     ])
 
+    const addTodos = (value) => {
+        setTodos([
+            ...todos,
+            value
+        ])    
+    }
+
     return (
         <div className='app'>
             <Title />
-            <Form  todos={todos} setTodos={setTodos}/>
+            <Form  addTodos={addTodos}/>
             <List todos={todos} />
         </div>
     )
